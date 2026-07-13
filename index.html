@@ -2,108 +2,53 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I AM - 김기훈의 갤럭시</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="./css/custom.css">
 </head>
-<body>
-    <div class="phone-wrapper">
-        <div class="hardware-btn volume-up"></div>
-        <div class="hardware-btn volume-down"></div>
-        <div class="hardware-btn power-btn"></div>
+<body class="flex min-h-screen items-center justify-center bg-slate-900 p-5 font-sans text-slate-50">
+    <div class="phone-wrapper relative px-3">
+        <div class="hardware-btn volume-up absolute top-[140px] left-2 z-10 h-[50px] w-1 rounded-l bg-slate-700"></div>
+        <div class="hardware-btn volume-down absolute top-[200px] left-2 z-10 h-[50px] w-1 rounded-l bg-slate-700"></div>
+        <div class="hardware-btn power-btn absolute top-[170px] right-2 z-10 h-[65px] w-1 rounded-r bg-slate-700"></div>
 
-        <div class="phone-container">
+        <div class="phone-container relative flex h-[844px] w-full max-w-[412px] flex-col overflow-hidden rounded-[44px] border-[12px] border-[#2d3540] bg-[#0D1117] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7),inset_0_0_4px_rgba(255,255,255,0.1)]">
             <div class="camera-island"></div>
 
-            <div class="status-bar">
+            <div class="status-bar z-10 flex h-10 items-center justify-between px-6 pt-2 text-[13px] font-medium">
                 <span class="status-time">15:00</span>
                 <span class="status-icons">LTE 🔋 100%</span>
             </div>
 
-            <div class="screen-content">
-                <section
-                    id="sec-home"
-                    class="app-section active boot-fade-in"
-                >
-                    <div class="hero-section">
-                        <div class="profile-img-placeholder">🚀</div>
-
-                        <h1 class="hero-title">
-                            김기훈의 디바이스
-                        </h1>
-
-                        <p class="hero-subtitle">
-                            싸피 필수 앱: 기훈(이)랑 친해지는 법 v1.0
-                            <br>
-                            하단의 앱 버튼을 눌러 기훈(이)에 대해
-                            알아보세요!
-                        </p>
+            <main class="screen-content relative flex flex-1 flex-col overflow-y-auto p-5 [&::-webkit-scrollbar]:hidden">
+                <section id="sec-home" class="app-section boot-fade-in flex flex-1 flex-col">
+                    <div class="py-8 text-center">
+                        <div class="mx-auto mb-4 flex h-[90px] w-[90px] items-center justify-center rounded-full bg-linear-to-br from-blue-500 to-violet-500 text-[32px]">🚀</div>
+                        <h1 class="mb-2 text-2xl font-bold">김기훈의 디바이스</h1>
+                        <p class="text-sm leading-6 text-slate-400">싸피 필수 앱: 기훈(이)랑 친해지는 법 v1.0<br>하단의 앱 버튼을 눌러 기훈(이)에 대해 알아보세요!</p>
                     </div>
 
-                    <div class="card-panel quick-status">
-                        <h3 class="panel-subtitle">현재 상태</h3>
-
-                        <p class="status-text">
-                            💬 대화 가능 / ⭐ 탐색 /
-                            ✍️ 스터디원 모집 중
-                        </p>
+                    <div class="mb-5 rounded-3xl bg-slate-800 p-6">
+                        <h2 class="mb-2 text-base font-semibold">현재 상태</h2>
+                        <p class="text-sm text-slate-300">💬 대화 가능 / ⭐ 탐색 / ✍️ 스터디원 모집 중</p>
                     </div>
 
-                    <div class="card-panel game-status-panel">
-                        <div
-                            style="
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                margin-bottom: 8px;
-                            "
-                        >
-                            <h3
-                                class="panel-subtitle"
-                                style="margin-bottom: 0;"
-                            >
-                                🔍 기훈이의 숨겨진 조각 수집
-                            </h3>
-
-                            <button
-                                id="btnResetGame"
-                                class="game-reset-btn"
-                                type="button"
-                            >
-                                초기화
-                            </button>
+                    <div class="mb-5 rounded-3xl border-2 border-dashed border-blue-500 bg-slate-800 p-6">
+                        <div class="mb-2 flex items-center justify-between">
+                            <h2 class="text-base font-semibold">🔍 기훈이의 숨겨진 조각 수집</h2>
+                            <button id="btnResetGame" class="rounded-lg bg-slate-700 px-2.5 py-1 text-[11px] font-semibold text-slate-400 transition hover:bg-red-500 hover:text-white active:scale-95" type="button">초기화</button>
                         </div>
-
-                        <p class="game-desc">
-                            추천 피드 사진들을 좌우로 드래그하며
-                            숨겨진 아이콘을 찾아보세요!
-                        </p>
-
-                        <div class="game-progress-bar">
-                            <div
-                                id="gameProgress"
-                                style="width: 0%;"
-                            ></div>
+                        <p class="mb-3 mt-1 text-xs text-slate-400">추천 피드 사진들을 좌우로 드래그하며 숨겨진 아이콘을 찾아보세요!</p>
+                        <div class="mb-1.5 h-2 w-full overflow-hidden rounded bg-slate-900">
+                            <div id="gameProgress" class="h-full bg-linear-to-r from-blue-500 to-emerald-500 transition-[width] duration-400" style="width: 0%;"></div>
                         </div>
-
-                        <span
-                            id="gameCountText"
-                            class="game-count-txt"
-                        >
-                            찾은 조각: 0 / 2
-                        </span>
+                        <span id="gameCountText" class="text-xs font-bold text-emerald-500">찾은 조각: 0 / 2</span>
                     </div>
                 </section>
-            </div>
+            </main>
 
-            <div
-                id="navigation-container"
-                class="navigation-container"
-            ></div>
+            <div id="navigation-container" class="navigation-container"></div>
         </div>
     </div>
 
