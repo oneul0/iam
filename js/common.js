@@ -11,11 +11,13 @@ async function loadNavigation() {
     if (!container) return;
 
     try {
-        const response = await fetch('./includes/nav.html');
+        const response = await fetch(
+            '/html/includes/nav.html'
+        );
 
         if (!response.ok) {
             throw new Error(
-                `네비게이션을 불러오지 못했습니다. (${response.status})`
+                `네비게이션 로드 실패: ${response.status}`
             );
         }
 
