@@ -24,9 +24,9 @@ function initChatSystem() {
             text: '저는 99년생, 28살입니다!'
         },
         {
-            keywords: ['음식', '최애'],
+            keywords: ['음식', '최애', '빵', '고기'],
             text: '빵과 고기💯',
-            image: '../static/bakery1_1.jpg'
+            image: '/static/bakery1_1.jpg'
         }
     ];
 

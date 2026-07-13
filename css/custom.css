@@ -1,0 +1,194 @@
+body {
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.navigation-container {
+    flex-shrink: 0;
+}
+
+.nav-item.active {
+    color: #60a5fa;
+}
+
+.navigation-error {
+    display: flex;
+    height: 76px;
+    align-items: center;
+    justify-content: center;
+    background: #161b22;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.camera-island {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    z-index: 9999;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 9999px;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    white-space: nowrap;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                border-radius 0.4s ease;
+}
+
+.camera-island.dynamic-notification {
+    width: 140px;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 15px;
+}
+
+.camera-island span {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.camera-island.dynamic-notification span {
+    opacity: 1;
+}
+
+.phone-container.power-off::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 99999;
+    background: #000;
+    pointer-events: auto;
+    animation: fadeToBlack 0.2s ease-in-out forwards;
+}
+
+.volume-bar-container {
+    position: absolute;
+    top: 80px;
+    left: 12px;
+    z-index: 1000;
+    width: 6px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgb(255 255 255 / 20%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.volume-bar-container.active {
+    opacity: 1;
+}
+
+.volume-level {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    transition: height 0.1s ease;
+}
+
+.boot-fade-in {
+    animation: bootDevice 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.msg-wrapper {
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.msg-wrapper.opponent {
+    justify-content: flex-start;
+}
+
+.msg-wrapper.me {
+    justify-content: flex-end;
+}
+
+.msg-bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.msg-wrapper.opponent .msg-bubble {
+    border-radius: 18px 18px 18px 4px;
+    background: #262626;
+    color: #f5f5f5;
+}
+
+.msg-wrapper.me .msg-bubble {
+    border-radius: 18px 18px 4px 18px;
+    background: #3797ef;
+    color: #fff;
+}
+
+.easter-egg {
+    position: absolute;
+    z-index: 5;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    font-size: 24px;
+    opacity: 0.12;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.easter-egg:hover {
+    transform: scale(1.2);
+    opacity: 0.6;
+}
+
+.easter-egg.found {
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgb(0 0 0 / 70%);
+}
+
+.custom-modal.active {
+    display: flex;
+}
+
+@keyframes fadeToBlack {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bootDevice {
+    0% {
+        opacity: 0;
+        transform: scale(0.96);
+        filter: brightness(0.2) blur(4px);
+    }
+    30% {
+        opacity: 0.3;
+        filter: brightness(0.5) blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1) blur(0);
+    }
+}

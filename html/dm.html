@@ -2,86 +2,52 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DM - 김기훈의 갤럭시</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../css/custom.css">
 </head>
-<body>
-    <div class="phone-wrapper">
-        <div class="hardware-btn volume-up"></div>
-        <div class="hardware-btn volume-down"></div>
-        <div class="hardware-btn power-btn"></div>
+<body class="flex min-h-screen items-center justify-center bg-slate-900 p-5 font-sans text-slate-50">
+    <div class="phone-wrapper relative px-3">
+        <div class="hardware-btn volume-up absolute top-[140px] left-2 z-10 h-[50px] w-1 rounded-l bg-slate-700"></div>
+        <div class="hardware-btn volume-down absolute top-[200px] left-2 z-10 h-[50px] w-1 rounded-l bg-slate-700"></div>
+        <div class="hardware-btn power-btn absolute top-[170px] right-2 z-10 h-[65px] w-1 rounded-r bg-slate-700"></div>
 
-        <div class="phone-container">
+        <div class="phone-container relative flex h-[844px] w-full max-w-[412px] flex-col overflow-hidden rounded-[44px] border-[12px] border-[#2d3540] bg-[#0D1117] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7),inset_0_0_4px_rgba(255,255,255,0.1)]">
             <div class="camera-island"></div>
 
-            <div class="status-bar">
+            <div class="status-bar z-10 flex h-10 items-center justify-between px-6 pt-2 text-[13px] font-medium">
                 <span class="status-time">15:00</span>
                 <span class="status-icons">LTE 🔋 100%</span>
             </div>
 
-            <div class="screen-content">
-                <section
-                    id="sec-about"
-                    class="app-section active"
-                >
-                    <div class="dm-window">
-                        <div class="dm-header">
-                            <div class="dm-header-avatar">
-                                KH
-                            </div>
-
-                            <div class="dm-header-info">
-                                <span class="dm-username">
-                                    김기훈
-                                </span>
-
-                                <span class="dm-active-status">
-                                    지금 활동 중
-                                </span>
+            <main class="screen-content relative flex flex-1 flex-col overflow-y-auto p-5 [&::-webkit-scrollbar]:hidden">
+                <section id="sec-about" class="app-section flex flex-1 flex-col">
+                    <div class="flex h-full flex-1 flex-col overflow-hidden rounded-3xl bg-black">
+                        <div class="flex items-center gap-3 border-b border-[#262626] px-4 py-3.5">
+                            <div class="flex h-9 w-9 items-center justify-center rounded-full bg-linear-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-xs font-bold text-white">KH</div>
+                            <div class="flex flex-col">
+                                <span class="text-sm font-semibold">김기훈</span>
+                                <span class="text-[11px] text-[#A8A8A8]">지금 활동 중</span>
                             </div>
                         </div>
 
-                        <div class="dm-body" id="chatBody">
-                            <div class="msg-time">오늘</div>
-
+                        <div id="chatBody" class="flex flex-1 flex-col gap-3 overflow-y-auto p-4 [&::-webkit-scrollbar]:hidden">
+                            <div class="my-2 text-center text-[11px] text-[#737373]">오늘</div>
                             <div class="msg-wrapper opponent">
-                                <div class="msg-bubble">
-                                    소심한 기훈(이)가 친구가 많은
-                                    기분을 느끼게 도와주세요.
-                                    아래에 메시지를 보내 도울 수
-                                    있습니다. 💬
-                                </div>
+                                <div class="msg-bubble">소심한 기훈(이)가 친구가 많은 기분을 느끼게 도와주세요. 아래에 메시지를 보내 도울 수 있습니다. 💬</div>
                             </div>
                         </div>
 
-                        <div class="dm-footer">
-                            <input
-                                type="text"
-                                id="chatInput"
-                                placeholder="메시지 보내기..."
-                                autocomplete="off"
-                            >
-
-                            <button
-                                id="btnSend"
-                                class="send-txt-btn"
-                                type="button"
-                            >
-                                전송
-                            </button>
+                        <div class="flex items-center gap-2 border-t border-[#262626] p-3">
+                            <input id="chatInput" class="min-w-0 flex-1 rounded-[22px] border border-[#363636] bg-[#121212] px-4 py-2.5 text-sm text-white outline-none focus:border-[#3797EF]" type="text" placeholder="메시지 보내기..." autocomplete="off">
+                            <button id="btnSend" class="px-2 py-1 text-sm font-bold text-[#3797EF] transition active:scale-95 active:text-blue-700" type="button">전송</button>
                         </div>
                     </div>
                 </section>
-            </div>
+            </main>
 
-            <div
-                id="navigation-container"
-                class="navigation-container"
-            ></div>
+            <div id="navigation-container" class="navigation-container"></div>
         </div>
     </div>
 

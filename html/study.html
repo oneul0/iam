@@ -2,56 +2,36 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스터디 - 김기훈의 갤럭시</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../css/custom.css">
 </head>
-<body>
-    <div class="phone-wrapper">
-        <div class="hardware-btn volume-up"></div>
-        <div class="hardware-btn volume-down"></div>
-        <div class="hardware-btn power-btn"></div>
+<body class="flex min-h-screen items-center justify-center bg-slate-900 p-5 font-sans text-slate-50">
+    <div class="phone-wrapper relative px-3">
+        <div class="hardware-btn volume-up absolute top-[140px] left-2 z-10 h-[50px] w-1 rounded-l bg-slate-700"></div>
+        <div class="hardware-btn volume-down absolute top-[200px] left-2 z-10 h-[50px] w-1 rounded-l bg-slate-700"></div>
+        <div class="hardware-btn power-btn absolute top-[170px] right-2 z-10 h-[65px] w-1 rounded-r bg-slate-700"></div>
 
-        <div class="phone-container">
+        <div class="phone-container relative flex h-[844px] w-full max-w-[412px] flex-col overflow-hidden rounded-[44px] border-[12px] border-[#2d3540] bg-[#0D1117] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7),inset_0_0_4px_rgba(255,255,255,0.1)]">
             <div class="camera-island"></div>
 
-            <div class="status-bar">
+            <div class="status-bar z-10 flex h-10 items-center justify-between px-6 pt-2 text-[13px] font-medium">
                 <span class="status-time">15:00</span>
                 <span class="status-icons">LTE 🔋 100%</span>
             </div>
 
-            <div class="screen-content">
-                <section
-                    id="sec-study"
-                    class="app-section active"
-                >
-                    <div class="card-panel">
-                        <span class="study-badge">
-                            모집 중
-                        </span>
-
-                        <h1 class="section-title">
-                            ✍️ 취업 스터디 빌드업
-                        </h1>
-
-                        <p class="about-text">
-                            자소서 첨삭, 모의 면접 등 취업 관련
-                            스터디를 함께 시작하고 싶습니다.
-                            구체적인 진행 방식은 여러분과 함께
-                            맞춰나가며 채워갈 예정이니 편하게
-                            다가와 주세요!
-                        </p>
+            <main class="screen-content relative flex flex-1 flex-col overflow-y-auto p-5 [&::-webkit-scrollbar]:hidden">
+                <section id="sec-study" class="app-section flex flex-1 flex-col">
+                    <div class="mb-5 rounded-3xl bg-slate-800 p-6">
+                        <span class="mb-2.5 inline-block rounded-md bg-blue-700/20 px-2 py-1 text-xs font-bold text-blue-400">모집 중</span>
+                        <h1 class="mb-3.5 text-xl font-semibold">✍️ 취업 스터디 빌드업</h1>
+                        <p class="text-sm leading-[1.6] text-slate-300">자소서 첨삭, 모의 면접 등 취업 관련 스터디를 함께 시작하고 싶습니다. 구체적인 진행 방식은 여러분과 함께 맞춰나가며 채워갈 예정이니 편하게 다가와 주세요!</p>
                     </div>
                 </section>
-            </div>
+            </main>
 
-            <div
-                id="navigation-container"
-                class="navigation-container"
-            ></div>
+            <div id="navigation-container" class="navigation-container"></div>
         </div>
     </div>
 
