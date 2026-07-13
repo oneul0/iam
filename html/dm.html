@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>DM - 김기훈의 갤럭시</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="phone-wrapper">
+        <div class="hardware-btn volume-up"></div>
+        <div class="hardware-btn volume-down"></div>
+        <div class="hardware-btn power-btn"></div>
+
+        <div class="phone-container">
+            <div class="camera-island"></div>
+
+            <div class="status-bar">
+                <span class="status-time">15:00</span>
+                <span class="status-icons">LTE 🔋 100%</span>
+            </div>
+
+            <div class="screen-content">
+                <section
+                    id="sec-about"
+                    class="app-section active"
+                >
+                    <div class="dm-window">
+                        <div class="dm-header">
+                            <div class="dm-header-avatar">
+                                KH
+                            </div>
+
+                            <div class="dm-header-info">
+                                <span class="dm-username">
+                                    김기훈
+                                </span>
+
+                                <span class="dm-active-status">
+                                    지금 활동 중
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="dm-body" id="chatBody">
+                            <div class="msg-time">오늘</div>
+
+                            <div class="msg-wrapper opponent">
+                                <div class="msg-bubble">
+                                    소심한 기훈(이)가 친구가 많은
+                                    기분을 느끼게 도와주세요.
+                                    아래에 메시지를 보내 도울 수
+                                    있습니다. 💬
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dm-footer">
+                            <input
+                                type="text"
+                                id="chatInput"
+                                placeholder="메시지 보내기..."
+                                autocomplete="off"
+                            >
+
+                            <button
+                                id="btnSend"
+                                class="send-txt-btn"
+                                type="button"
+                            >
+                                전송
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div
+                id="navigation-container"
+                class="navigation-container"
+            ></div>
+        </div>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/dm.js"></script>
+</body>
+</html>

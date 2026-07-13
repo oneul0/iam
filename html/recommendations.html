@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>추천 - 김기훈의 갤럭시</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="phone-wrapper">
+        <div class="hardware-btn volume-up"></div>
+        <div class="hardware-btn volume-down"></div>
+        <div class="hardware-btn power-btn"></div>
+
+        <div class="phone-container">
+            <div class="camera-island"></div>
+
+            <div class="status-bar">
+                <span class="status-time">15:00</span>
+                <span class="status-icons">LTE 🔋 100%</span>
+            </div>
+
+            <div class="screen-content">
+                <section
+                    id="sec-bakery"
+                    class="app-section active"
+                >
+                    <div class="bakery-feed-container">
+                        <article class="instagram-post">
+                            <div class="post-header">
+                                <div class="post-avatar">🥐</div>
+
+                                <span class="post-username">
+                                    kihoon_
+                                </span>
+                            </div>
+
+                            <div class="post-slider-container">
+                                <div class="post-slider-track">
+                                    <div class="slide-item">
+                                        <img
+                                            src="../static/bakery1_1.jpg"
+                                            alt="빵집1 사진1"
+                                            draggable="false"
+                                        >
+                                    </div>
+
+                                    <div class="slide-item">
+                                        <img
+                                            src="../static/bakery1_2.jpg"
+                                            alt="빵집1 사진2"
+                                            draggable="false"
+                                        >
+
+                                        <div
+                                            class="easter-egg"
+                                            data-id="item_coffee"
+                                            style="
+                                                top: 15%;
+                                                right: 15%;
+                                            "
+                                        >
+                                            ☕
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-item">
+                                        <img
+                                            src="../static/bakery1_3.jpg"
+                                            alt="빵집1 사진3"
+                                            draggable="false"
+                                        >
+                                    </div>
+
+                                    <div class="slide-item">
+                                        <img
+                                            src="../static/bakery1_4.jpg"
+                                            alt="빵집1 사진4"
+                                            draggable="false"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-icons">
+                                ❤️ 💬 ✈️
+                            </div>
+
+                            <div class="post-content">
+                                <p class="post-caption">
+                                    <strong>kihoon_</strong>
+                                    대전 사람들만의 작은 빵집이었던
+                                    성심당은 어느덧.. 더보기
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="instagram-post">
+                            <div class="post-header">
+                                <div class="post-avatar">🥐</div>
+
+                                <span class="post-username">
+                                    kihoon_
+                                </span>
+                            </div>
+
+                            <div class="post-slider-container">
+                                <div class="post-slider-track">
+                                    <div class="slide-item">
+                                        <img
+                                            src="../static/hobby_1.jpeg"
+                                            alt="취미 사진1"
+                                            draggable="false"
+                                        >
+
+                                        <div
+                                            class="easter-egg"
+                                            data-id="item_dumbbell"
+                                            style="
+                                                bottom: 20%;
+                                                left: 15%;
+                                            "
+                                        >
+                                            🏋️‍♂️
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-item">
+                                        <img
+                                            src="../static/hobby_2.jpeg"
+                                            alt="취미 사진2"
+                                            draggable="false"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-icons">
+                                ❤️ 💬 ✈️
+                            </div>
+
+                            <div class="post-content">
+                                <p class="post-caption">
+                                    <strong>kihoon_</strong>
+                                    의지로 멘탈관리가 되지 않을
+                                    때는 나가자
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <div
+                id="navigation-container"
+                class="navigation-container"
+            ></div>
+        </div>
+    </div>
+
+    <div id="gameModal" class="custom-modal">
+        <div class="modal-content">
+            <h2>🎉 클리어 성공!</h2>
+
+            <p>
+                기훈(이)의 멘탈 관리 아이템을 모두 찾으셨군요!
+                <br>
+                이제 DM 창에
+                <strong>"오운완"</strong>
+                또는
+                <strong>"아메리카노"</strong>
+                를 보내 히든 리액션을 확인해 보세요!
+            </p>
+
+            <button id="btnCloseModal" type="button">
+                확인
+            </button>
+        </div>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/recommendations.js"></script>
+</body>
+</html>

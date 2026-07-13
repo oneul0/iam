@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>I AM - 김기훈의 갤럭시</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="phone-wrapper">
+        <div class="hardware-btn volume-up"></div>
+        <div class="hardware-btn volume-down"></div>
+        <div class="hardware-btn power-btn"></div>
+
+        <div class="phone-container">
+            <div class="camera-island"></div>
+
+            <div class="status-bar">
+                <span class="status-time">15:00</span>
+                <span class="status-icons">LTE 🔋 100%</span>
+            </div>
+
+            <div class="screen-content">
+                <section
+                    id="sec-home"
+                    class="app-section active boot-fade-in"
+                >
+                    <div class="hero-section">
+                        <div class="profile-img-placeholder">🚀</div>
+
+                        <h1 class="hero-title">
+                            김기훈의 디바이스
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            싸피 필수 앱: 기훈(이)랑 친해지는 법 v1.0
+                            <br>
+                            하단의 앱 버튼을 눌러 기훈(이)에 대해
+                            알아보세요!
+                        </p>
+                    </div>
+
+                    <div class="card-panel quick-status">
+                        <h3 class="panel-subtitle">현재 상태</h3>
+
+                        <p class="status-text">
+                            💬 대화 가능 / ⭐ 탐색 /
+                            ✍️ 스터디원 모집 중
+                        </p>
+                    </div>
+
+                    <div class="card-panel game-status-panel">
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 8px;
+                            "
+                        >
+                            <h3
+                                class="panel-subtitle"
+                                style="margin-bottom: 0;"
+                            >
+                                🔍 기훈이의 숨겨진 조각 수집
+                            </h3>
+
+                            <button
+                                id="btnResetGame"
+                                class="game-reset-btn"
+                                type="button"
+                            >
+                                초기화
+                            </button>
+                        </div>
+
+                        <p class="game-desc">
+                            추천 피드 사진들을 좌우로 드래그하며
+                            숨겨진 아이콘을 찾아보세요!
+                        </p>
+
+                        <div class="game-progress-bar">
+                            <div
+                                id="gameProgress"
+                                style="width: 0%;"
+                            ></div>
+                        </div>
+
+                        <span
+                            id="gameCountText"
+                            class="game-count-txt"
+                        >
+                            찾은 조각: 0 / 2
+                        </span>
+                    </div>
+                </section>
+            </div>
+
+            <div
+                id="navigation-container"
+                class="navigation-container"
+            ></div>
+        </div>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+</html>
